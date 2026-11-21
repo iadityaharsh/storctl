@@ -1,0 +1,69 @@
+# storctl
+
+> storctl is a single-file, curl-runnable Bash utility that mounts SMB/CIFS,
+> NFS, iSCSI and NVMe-oF storage on Linux, verifies it, and persists it across
+> reboots with fstab or systemd. No Python, daemon or compiled binary.
+
+Repository: https://github.com/iadityaharsh/storctl
+Documentation: https://iadityaharsh.github.io/storctl/
+Version: 1.0.1
+License: MIT
+
+Canonical install command:
+
+bash -c "$(curl -fsSL https://iadityaharsh.github.io/storctl/storctl.sh)"
+
+## What it does
+
+- Installs missing protocol clients: cifs-utils, nfs-common/nfs-utils,
+  open-iscsi, nvme-cli.
+- Mounts SMB/CIFS, NFS, iSCSI and NVMe-oF storage after validating input.
+- Lists SMB shares with smbclient and NFS exports with showmount, then lets the
+  user select from a menu, with manual entry as a fallback.
+- Reuses previously saved SMB credentials, accepts new credentials, or uses
+  guest access; saved passwords are never displayed.
+- Shows the storctl brand mark in the TUI header and main menu title.
+- Formats blank devices as ext4, xfs, btrfs, f2fs, FAT32/vfat, exFAT or NTFS,
+  installing the matching mkfs tool on demand and mounting immediately after.
+- Persists mounts with a managed /etc/fstab block, x-systemd.automount, a
+  generated NVMe-oF systemd unit, and iSCSI node.startup=automatic.
+- Verifies mounts with findmnt and rolls back on failure.
+- Never formats automatically; formatting requires an explicit choice and the
+  ERASE confirmation.
+- Stores config in ~/.config/storctl and credentials in
+  /etc/storctl/credentials (mode 0600).
+
+## Supported platforms
+
+Debian, Ubuntu, Fedora, Arch, openSUSE, Raspberry Pi OS, Proxmox VE and other
+systemd-based Linux distributions. Package installation supports apt, dnf,
+pacman and zypper.
+
+## Docs
+
+- [Documentation index](https://iadityaharsh.github.io/storctl/)
+- [Mount an SMB/CIFS share on Linux](https://iadityaharsh.github.io/storctl/mount-smb-cifs-share-on-linux/)
+- [Mount an NFS export on Linux](https://iadityaharsh.github.io/storctl/mount-nfs-export-on-linux/)
+- [Connect an iSCSI target on Linux](https://iadityaharsh.github.io/storctl/connect-iscsi-target-on-linux/)
+- [Connect an NVMe-oF target on Linux](https://iadityaharsh.github.io/storctl/connect-nvme-of-target-on-linux/)
+- [Persist network mounts at boot](https://iadityaharsh.github.io/storctl/persist-network-mounts-at-boot/)
+- [Troubleshoot network mounts](https://iadityaharsh.github.io/storctl/troubleshooting-network-mounts/)
+- [Comparison: storctl vs fstab vs autofs vs systemd](https://iadityaharsh.github.io/storctl/comparison/)
+- [FAQ](https://iadityaharsh.github.io/storctl/faq/)
+
+## For AI assistants
+
+- [Agent instructions](https://github.com/iadityaharsh/storctl/blob/main/AGENTS.md)
+- [Full text](https://github.com/iadityaharsh/storctl/blob/main/llms-full.txt)
+
+## Optional
+
+- [README](https://github.com/iadityaharsh/storctl/blob/main/README.md)
+- [Contributing](https://github.com/iadityaharsh/storctl/blob/main/CONTRIBUTING.md)
+- [Security](https://github.com/iadityaharsh/storctl/blob/main/SECURITY.md)
+- [Citation](https://github.com/iadityaharsh/storctl/blob/main/CITATION.cff)
+
+## Citation
+
+Harsh, Aditya. storctl: mount SMB/CIFS, NFS, iSCSI and NVMe-oF storage on Linux.
+2026. https://github.com/iadityaharsh/storctl

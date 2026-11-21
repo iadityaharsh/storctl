@@ -1,0 +1,29 @@
+.storctl-hero {
+  margin: 1.5rem auto 0.75rem;
+}
+
+.storctl-hero img {
+  display: none;
+  width: min(100%, 520px);
+  height: auto;
+}
+
+.storctl-hero .storctl-logo-on-light {
+  display: inline;
+}
+
+[data-md-color-scheme="slate"] .storctl-hero .storctl-logo-on-light {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] .storctl-hero .storctl-logo-on-dark {
+  display: inline;
+}
+
+[data-md-color-scheme="default"] .storctl-hero .storctl-logo-on-dark {
+  display: none;
+}
+
+[data-md-color-scheme="default"] .md-logo img {
+  content: url("../images/storctl-mark-light.svg");
+}

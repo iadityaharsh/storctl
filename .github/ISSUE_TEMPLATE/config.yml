@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://github.com/iadityaharsh/storctl/blob/main/docs/README.md
+    about: Protocol guides, boot persistence, troubleshooting and FAQ.
+  - name: Security report
+    url: https://github.com/iadityaharsh/storctl/blob/main/SECURITY.md
+    about: Report vulnerabilities privately by email.

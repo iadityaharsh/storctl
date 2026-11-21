@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="storctl">
+<title>storctl</title>
+<g transform="translate(0 0)">
+  
+  <polyline points="56,84 108,128 56,172" fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="132" y="73" width="80" height="30" rx="9" fill="currentColor"/>
+  <rect x="132" y="113" width="80" height="30" rx="9" fill="currentColor"/>
+  <rect x="132" y="153" width="80" height="30" rx="9" fill="currentColor"/>
+</g>
+</svg>

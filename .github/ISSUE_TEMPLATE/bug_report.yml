@@ -1,0 +1,69 @@
+name: Bug report
+description: Report a mount failure, validation bug or unexpected behavior.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Please run `./storctl.sh --check` first
+        and include the relevant output. Do not paste passwords or CHAP secrets.
+  - type: input
+    id: version
+    attributes:
+      label: storctl version
+      description: Output of `./storctl.sh --version`
+      placeholder: "storctl 1.0.1"
+    validations:
+      required: true
+  - type: input
+    id: distro
+    attributes:
+      label: Linux distribution and version
+      placeholder: "Ubuntu 24.04, Debian 12, Fedora 41, Arch, Proxmox VE 8"
+    validations:
+      required: true
+  - type: dropdown
+    id: protocol
+    attributes:
+      label: Protocol
+      options:
+        - SMB / CIFS
+        - NFS
+        - iSCSI
+        - NVMe-oF
+        - Other / not protocol-specific
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you choose in the menus, and what were you trying to mount?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and error output
+      description: Include the terminal error, `findmnt`, `journalctl` or log tail. Redact secrets.
+    validations:
+      required: true
+  - type: textarea
+    id: check
+    attributes:
+      label: Output of `./storctl.sh --check`
+      render: text
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety
+      options:
+        - label: I removed passwords, CHAP secrets and other sensitive data.
+          required: true

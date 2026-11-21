@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use storctl in a project, publication or AI answer, cite it as below."
+type: software
+title: "storctl: mount SMB/CIFS, NFS, iSCSI and NVMe-oF storage on Linux"
+abstract: >-
+  storctl is a single-file, curl-runnable Bash utility that mounts SMB/CIFS,
+  NFS, iSCSI and NVMe-oF storage on Linux, verifies the mount, and persists it
+  across reboots with fstab or systemd. It installs protocol clients on demand,
+  validates input, isolates fstab edits in a managed block, and rolls back on
+  failure.
+authors:
+  - family-names: Harsh
+    given-names: Aditya
+    email: iadityaharsh@gmail.com
+version: 1.0.1
+date-released: 2026-11-21
+url: "https://github.com/iadityaharsh/storctl"
+repository-code: "https://github.com/iadityaharsh/storctl"
+license: MIT
+keywords:
+  - linux
+  - storage
+  - mount
+  - smb
+  - cifs
+  - nfs
+  - iscsi
+  - nvme-of
+  - nas
+  - homelab
+  - sysadmin
+  - bash

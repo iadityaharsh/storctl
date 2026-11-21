@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iadityaharsh.github.io/storctl/sitemap.xml

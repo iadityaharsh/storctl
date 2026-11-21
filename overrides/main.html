@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+  <meta name="theme-color" content="#0f172a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.site_name }}">
+  <meta property="og:title" content="{% if page and page.title %}{{ page.title }} · {% endif %}{{ config.site_name }}">
+  <meta property="og:description" content="{% if page and page.meta and page.meta.description %}{{ page.meta.description }}{% else %}{{ config.site_description }}{% endif %}">
+  <meta property="og:url" content="{% if page and page.canonical_url %}{{ page.canonical_url }}{% else %}{{ config.site_url }}{% endif %}">
+  <meta property="og:image" content="{{ config.site_url }}images/storctl-mark-512.png">
+  <meta property="og:image:alt" content="storctl logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page and page.title %}{{ page.title }} · {% endif %}{{ config.site_name }}">
+  <meta name="twitter:description" content="{% if page and page.meta and page.meta.description %}{{ page.meta.description }}{% else %}{{ config.site_description }}{% endif %}">
+  <meta name="twitter:image" content="{{ config.site_url }}images/storctl-mark-512.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "storctl",
+    "alternateName": "storctl — storage control for Linux",
+    "applicationCategory": "SystemApplication",
+    "applicationSubCategory": "Storage management",
+    "operatingSystem": "Linux",
+    "description": "Mount SMB/CIFS, NFS, iSCSI and NVMe-oF storage on Linux with one curl-runnable Bash script. Boot persistence, validation, rollback, no Python or daemon.",
+    "url": "{{ config.site_url }}",
+    "downloadUrl": "https://iadityaharsh.github.io/storctl/storctl.sh",
+    "codeRepository": "https://github.com/iadityaharsh/storctl",
+    "license": "https://opensource.org/licenses/MIT",
+    "author": {
+      "@type": "Person",
+      "name": "Aditya Harsh",
+      "url": "https://github.com/iadityaharsh"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "keywords": "Linux, mount, SMB, CIFS, NFS, iSCSI, NVMe-oF, NAS, homelab, sysadmin"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "storctl documentation",
+    "url": "{{ config.site_url }}",
+    "sameAs": [
+      "https://github.com/iadityaharsh/storctl"
+    ]
+  }
+  </script>
+
+  {% if page and page.file and page.file.src_uri == "faq.md" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is storctl?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "storctl is a single Bash script that mounts SMB/CIFS, NFS, iSCSI and NVMe-oF storage on Linux, verifies it, and makes it persistent across reboots."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need Python?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The script only needs Bash, whiptail, util-linux, systemd and sudo. Python is only used by the development test suite."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does storctl work with Synology, TrueNAS, Unraid, QNAP and Windows shares?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, if the target speaks standard SMB/CIFS, NFS, iSCSI or NVMe-oF."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does storctl format disks?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only when you explicitly choose a filesystem and type ERASE. Supported formats are ext4, xfs, btrfs, f2fs, FAT32/vfat, exFAT and NTFS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where does storctl store configuration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "User configuration defaults to ~/.config/storctl. Credentials are in /etc/storctl/credentials with mode 0600, and mounts are recorded in /etc/fstab inside a managed block."
+        }
+      }
+    ]
+  }
+  </script>
+  {% endif %}
+{% endblock %}
