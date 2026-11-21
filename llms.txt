@@ -6,7 +6,7 @@
 
 Repository: https://github.com/iadityaharsh/storctl
 Documentation: https://iadityaharsh.github.io/storctl/
-Version: 1.0.1
+Version: 1.0.2
 License: MIT
 
 Canonical install command:

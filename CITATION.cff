@@ -12,7 +12,7 @@ authors:
   - family-names: Harsh
     given-names: Aditya
     email: iadityaharsh@gmail.com
-version: 1.0.1
+version: 1.0.2
 date-released: 2026-11-21
 url: "https://github.com/iadityaharsh/storctl"
 repository-code: "https://github.com/iadityaharsh/storctl"

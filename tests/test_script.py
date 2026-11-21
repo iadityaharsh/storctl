@@ -648,6 +648,7 @@ class InteractiveTests(ScriptEnv):
             child.expect("Apply now")
             child.expect("/srv/media")
             child.expect("vers=3.0")
+            child.expect("Yes")
             child.send("\r")  # Yes
             child.expect("would be mounted at")
             child.expect("on first access")
@@ -685,6 +686,7 @@ class InteractiveTests(ScriptEnv):
             child.expect("Additional mount options")
             child.send("\r")
             child.expect("Apply now")
+            child.expect("Yes")
             child.send("\r")  # Yes
             child.expect("would be mounted at")
             child.send("\r")  # dismiss the success box

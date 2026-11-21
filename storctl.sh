@@ -19,7 +19,7 @@
 set -Eeuo pipefail
 
 APP_NAME="storctl"
-APP_VERSION="1.0.1"
+APP_VERSION="1.0.2"
 BRAND_MARK="▸▤"
 BACKTITLE="$BRAND_MARK $APP_NAME $APP_VERSION · storage control for Linux"
 MARK_BEGIN='# >>> storctl managed block (do not edit) >>>'

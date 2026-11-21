@@ -5,6 +5,14 @@
 - `0.0.1` — bug fixes, UI changes and small tweaks.
 - `0.1` — functional changes.
 
+## 1.0.2 — 2026-11-21
+
+### UI changes (0.0.1)
+
+- Documentation backgrounds now match the logo palette: `#1B1F23` dark,
+  `#F3F0EA` light, and `#FF7A1A` accents. Text, code blocks, tables, navigation
+  and footer contrast were adjusted for both light and dark schemes.
+
 ## 1.0.1 — 2026-11-21
 
 Current release.

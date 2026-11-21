@@ -6,7 +6,7 @@
 
 Repository: https://github.com/iadityaharsh/storctl
 Documentation: https://iadityaharsh.github.io/storctl/
-Version: 1.0.1
+Version: 1.0.2
 License: MIT
 
 ---
@@ -1721,6 +1721,14 @@ This trusts the URL and the network. For higher assurance:
 - `0.0.1` — bug fixes, UI changes and small tweaks.
 - `0.1` — functional changes.
 
+## 1.0.2 — 2026-11-21
+
+### UI changes (0.0.1)
+
+- Documentation backgrounds now match the logo palette: `#1B1F23` dark,
+  `#F3F0EA` light, and `#FF7A1A` accents. Text, code blocks, tables, navigation
+  and footer contrast were adjusted for both light and dark schemes.
+
 ## 1.0.1 — 2026-11-21
 
 Current release.
@@ -1764,7 +1772,7 @@ authors:
   - family-names: Harsh
     given-names: Aditya
     email: iadityaharsh@gmail.com
-version: 1.0.1
+version: 1.0.2
 date-released: 2026-11-21
 url: "https://github.com/iadityaharsh/storctl"
 repository-code: "https://github.com/iadityaharsh/storctl"
